@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AI Delivery Command Center</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar" aria-label="Portfolio navigation">
+        <div class="brand">
+          <div class="brand-mark" aria-hidden="true">AI</div>
+          <div>
+            <strong>AI Delivery</strong>
+            <span>Command Center</span>
+          </div>
+        </div>
+
+        <nav class="nav-tabs" aria-label="Views">
+          <button class="nav-tab active" type="button" data-view="portfolio">
+            <span class="icon" aria-hidden="true">◇</span>
+            Portfolio
+          </button>
+          <button class="nav-tab" type="button" data-view="intake">
+            <span class="icon" aria-hidden="true">＋</span>
+            Intake
+          </button>
+          <button class="nav-tab" type="button" data-view="value">
+            <span class="icon" aria-hidden="true">↗</span>
+            Value
+          </button>
+          <button class="nav-tab" type="button" data-view="narrative">
+            <span class="icon" aria-hidden="true">≡</span>
+            Narrative
+          </button>
+        </nav>
+
+        <div class="sidebar-panel">
+          <span class="eyebrow">Governance Gate</span>
+          <strong id="gateStatus">Loading</strong>
+          <p id="gateDetail"></p>
+        </div>
+      </aside>
+
+      <main class="workspace">
+        <header class="topbar">
+          <div>
+            <p class="eyebrow">Mock enterprise AI portfolio operating model</p>
+            <h1>Portfolio Control Tower</h1>
+          </div>
+          <div class="toolbar">
+            <label class="select-label" for="buFilter">BU</label>
+            <select id="buFilter">
+              <option value="All">All</option>
+            </select>
+            <label class="select-label" for="phaseFilter">Phase</label>
+            <select id="phaseFilter">
+              <option value="All">All</option>
+            </select>
+          </div>
+        </header>
+
+        <section class="metric-grid" aria-label="Portfolio scorecard">
+          <article class="metric">
+            <span>In Flight</span>
+            <strong id="metricInFlight">0</strong>
+            <small id="metricInFlightNote">0 in build</small>
+          </article>
+          <article class="metric">
+            <span>Projected Annual Value</span>
+            <strong id="metricProjected">$0</strong>
+            <small>Approved portfolio</small>
+          </article>
+          <article class="metric">
+            <span>Realized Value</span>
+            <strong id="metricRealized">$0</strong>
+            <small id="metricRealizedNote">0% of target</small>
+          </article>
+          <article class="metric risk-metric">
+            <span>Escalations</span>
+            <strong id="metricEscalations">0</strong>
+            <small id="metricEscalationNote">No critical blockers</small>
+          </article>
+        </section>
+
+        <section class="view active" id="portfolioView">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Delivery health agent</p>
+              <h2>Active Initiatives</h2>
+            </div>
+            <button class="secondary-button" id="resetData" type="button">Reset Sample</button>
+          </div>
+          <div class="portfolio-layout">
+            <div class="table-wrap" role="region" aria-label="AI initiatives" tabindex="0">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Initiative</th>
+                    <th>BU</th>
+                    <th>Phase</th>
+                    <th>Health</th>
+                    <th>Adoption</th>
+                    <th>ROI</th>
+                    <th>Vendor</th>
+                  </tr>
+                </thead>
+                <tbody id="initiativeRows"></tbody>
+              </table>
+            </div>
+            <aside class="detail-panel" aria-label="Selected initiative">
+              <div class="detail-header">
+                <span class="status-pill" id="detailHealth">Health</span>
+                <span id="detailPhase">Phase</span>
+              </div>
+              <h3 id="detailTitle">Select an initiative</h3>
+              <p id="detailNarrative"></p>
+              <dl class="detail-grid">
+                <div>
+                  <dt>Owner</dt>
+                  <dd id="detailOwner">-</dd>
+                </div>
+                <div>
+                  <dt>Build Path</dt>
+                  <dd id="detailBuild">-</dd>
+                </div>
+                <div>
+                  <dt>Blocker</dt>
+                  <dd id="detailBlocker">-</dd>
+                </div>
+                <div>
+                  <dt>Next Gate</dt>
+                  <dd id="detailGate">-</dd>
+                </div>
+              </dl>
+              <div class="bar-block">
+                <div class="bar-label">
+                  <span>Adoption</span>
+                  <strong id="detailAdoptionText">0%</strong>
+                </div>
+                <div class="bar-track"><span id="detailAdoptionBar"></span></div>
+              </div>
+              <div class="agent-card">
+                <span class="eyebrow">Recommended action</span>
+                <p id="detailRecommendation"></p>
+              </div>
+            </aside>
+          </div>
+        </section>
+
+        <section class="view" id="intakeView">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Intake qualification agent</p>
+              <h2>Use Case Scoring</h2>
+            </div>
+          </div>
+          <div class="intake-grid">
+            <form id="intakeForm" class="form-panel">
+              <label>
+                Initiative name
+                <input id="intakeName" required value="Rights Intelligence Briefing Agent">
+              </label>
+              <label>
+                Business unit
+                <select id="intakeBu">
+                  <option>WWE</option>
+                  <option>UFC</option>
+                  <option>IMG</option>
+                  <option>On Location</option>
+                  <option>PBR</option>
+                  <option>CSS</option>
+                </select>
+              </label>
+              <label>
+                Business problem
+                <textarea id="intakeProblem" rows="4" required>Reduce manual prep time for weekly media-rights partner briefings by turning sales notes, inventory updates, and campaign performance into a structured executive brief.</textarea>
+              </label>
+              <div class="slider-grid">
+                <label>
+                  Business value
+                  <input id="businessValue" type="range" min="1" max="5" value="5">
+                </label>
+                <label>
+                  Data readiness
+                  <input id="dataReadiness" type="range" min="1" max="5" value="4">
+                </label>
+                <label>
+                  Change complexity
+                  <input id="changeComplexity" type="range" min="1" max="5" value="3">
+                </label>
+                <label>
+                  Dependency load
+                  <input id="dependencyLoad" type="range" min="1" max="5" value="2">
+                </label>
+              </div>
+              <button class="primary-button" type="submit">Score Use Case</button>
+            </form>
+            <aside class="score-panel">
+              <div class="score-ring" id="scoreRing">
+                <span id="scoreNumber">88</span>
+                <small>score</small>
+              </div>
+              <h3 id="scoreDecision">Approve for scoping</h3>
+              <p id="scoreSummary"></p>
+              <div class="score-list" id="scoreDrivers"></div>
+              <button class="secondary-button" id="addScoredInitiative" type="button">Add to Portfolio</button>
+            </aside>
+          </div>
+        </section>
+
+        <section class="view" id="valueView">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">ROI realization agent</p>
+              <h2>Value Tracking</h2>
+            </div>
+          </div>
+          <div class="value-layout">
+            <div class="value-chart" aria-label="Projected versus realized value by business unit">
+              <div id="valueBars"></div>
+            </div>
+            <div class="value-insights">
+              <article class="agent-card">
+                <span class="eyebrow">Portfolio finding</span>
+                <p id="roiFinding"></p>
+              </article>
+              <article class="agent-card">
+                <span class="eyebrow">Adoption finding</span>
+                <p id="adoptionFinding"></p>
+              </article>
+              <article class="agent-card">
+                <span class="eyebrow">Commercial finding</span>
+                <p id="commercialFinding"></p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="view" id="narrativeView">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Executive narrative agent</p>
+              <h2>Leadership Update</h2>
+            </div>
+            <button class="primary-button" id="copyNarrative" type="button">Copy Memo</button>
+          </div>
+          <article class="memo" id="executiveMemo"></article>
+        </section>
+      </main>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
