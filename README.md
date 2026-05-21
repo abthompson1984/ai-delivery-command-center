@@ -58,9 +58,9 @@ Use the left-side navigation to walk through the delivery lifecycle:
 - **Value:** compare projected versus realized value and review adoption and commercial governance findings.
 - **Narrative:** generate an executive-ready leadership update with value proof, delivery risk, adoption risk, sequencing, and the recommended ask.
 
-## Suggested Interview Framing
+## Portfolio Narrative
 
-> I built a prototype operating model for enterprise AI portfolio governance and value realization. It is not meant to show off model complexity; it is meant to show how I would run the delivery side of an AI transformation portfolio: qualify demand, sequence work, govern vendor delivery, require adoption evidence, track realized value, and turn portfolio health into an executive narrative.
+This prototype demonstrates an operating approach for AI delivery: qualifying demand, sequencing work, governing vendor execution, requiring adoption evidence, tracking realized value, and converting portfolio health into executive-ready decisions.
 
 ## Design Choices
 
