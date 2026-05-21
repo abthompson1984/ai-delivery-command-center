@@ -2,6 +2,14 @@
 
 A static MVP prototype for enterprise AI portfolio governance and value realization. It is designed as a job-application showcase for an AI Portfolio & Solutions Lead role: the product demonstrates delivery orchestration, intake qualification, vendor health tracking, adoption evidence, ROI realization, and executive reporting without requiring backend services, API keys, or live LLM calls.
 
+## Live Demo
+
+Open the GitHub Pages site:
+
+```text
+https://abthompson1984.github.io/ai-delivery-command-center/
+```
+
 ## What It Shows
 
 - **Portfolio orchestration:** initiative-level view of scope, phase, build path, owner, health, adoption, vendor state, blockers, and next gate.
@@ -12,7 +20,14 @@ A static MVP prototype for enterprise AI portfolio governance and value realizat
 
 All data is sample data and can be reset from the Portfolio view.
 
-## Run Locally
+## How To Use The MVP
+
+- **Portfolio:** review active AI initiatives across business units, including phase, health, adoption, ROI, vendor status, blockers, and next gate.
+- **Intake:** score a new AI use case against business value, data readiness, change complexity, and dependency load, then add it to the portfolio.
+- **Value:** review projected versus realized value, adoption risk, and commercial governance findings.
+- **Narrative:** generate an executive-ready delivery update that summarizes value proof, delivery risk, adoption risk, sequencing, and the recommended ask.
+
+## Run Locally If Needed
 
 Open `index.html` directly in a browser, or serve it with:
 
@@ -26,13 +41,9 @@ Then visit:
 http://127.0.0.1:8765/
 ```
 
-## Publish To GitHub Pages
+## GitHub Pages
 
-1. Create a new GitHub repository.
-2. Push this folder to the repository root.
-3. In GitHub, go to **Settings > Pages**.
-4. Set the source to the main branch root.
-5. Open the Pages URL after GitHub finishes deployment.
+This repository is configured for GitHub Pages from the `main` branch root.
 
 No build step is required.
 
