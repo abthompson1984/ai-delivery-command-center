@@ -69,20 +69,6 @@ Use the left-side navigation to walk through the delivery lifecycle:
 - **Executive-first outputs:** every view is oriented around decisions, gates, value, and accountability.
 - **Reusable sample logic:** scoring, risk flags, ROI summaries, and narrative generation can be replaced later with real data or LLM-assisted workflows.
 
-## Run Locally If Needed
-
-Open `index.html` directly in a browser, or serve it with:
-
-```bash
-python3 -m http.server 8765
-```
-
-Then visit:
-
-```text
-http://127.0.0.1:8765/
-```
-
 ## GitHub Pages
 
 This repository is configured for GitHub Pages from the `main` branch root.
